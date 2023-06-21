@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/globals.css" />
     <link rel="stylesheet" href="/css/loadPage.css" />
+    <link rel="stylesheet" href="/css/fullPage.css" />
 
     <link rel="icon" href="/static/images/portfolio-cat-white-no-eyes.png" type="image/x-icon">
     <script src="/static/js/script.js" defer></script>
@@ -12,7 +13,7 @@
     <title>Aaron's Portfolio</title>
   </head>
   <body>
-    <div id="loadPage">
+    <div id="loadPage" class="show">
       <div id="loadContainer">
         <div class="catContainer">
             <img class="cat" src="/static/images/portfolio-cat-white-no-eyes-2.png" />
@@ -21,7 +22,7 @@
                 <img class="leftEye" src="/static/images/portfolio-cat-white-eye-2.png"/>
             </div>
         </div>
-        <button onclick="handleLoadButton()" id="loadButton"><span>MEET ME</span></button>
+        <button onclick="togglePages()" id="loadButton"><span>MEET ME</span></button>
       </div>
     </div>
     <div id="fullPage">

@@ -1,15 +1,23 @@
 window.addEventListener("resize", setDefaultEyes);
-window.addEventListener("load", setDefaultEyes);
+window.addEventListener("load", function () {
+  const loadPage = document.getElementById("loadPage");
+  loadPage.style.animation = "loadInAnimation 0.5s ease";
+  setDefaultEyes();
+});
 
 function setDefaultEyes() {
-  const cat = document.querySelector(".cat");
-  const catRect = cat.getBoundingClientRect();
-  const leftEye = document.querySelector(".leftEye");
-  const rightEye = document.querySelector(".rightEye");
-  leftEye.style.left = catRect.left + 109 + "px";
-  leftEye.style.top = catRect.top + 61 + "px";
-  rightEye.style.left = catRect.left + 132 + "px";
-  rightEye.style.top = catRect.top + 62 + "px";
+  setTimeout(function () {
+    const cat = document.querySelector(".cat");
+    const catRect = cat.getBoundingClientRect();
+    const leftEye = document.querySelector(".leftEye");
+    const rightEye = document.querySelector(".rightEye");
+    leftEye.style.left = catRect.left + 109 + "px";
+    leftEye.style.top = catRect.top + 61 + "px";
+    rightEye.style.left = catRect.left + 132 + "px";
+    rightEye.style.top = catRect.top + 62 + "px";
+    leftEye.classList.add("show");
+    rightEye.classList.add("show");
+  }, 500);
 }
 
 document.addEventListener("mousemove", (e) => {
@@ -62,10 +70,11 @@ function hideCursor() {
 function showCursor() {
   cursor.style.visibility = "visible";
 }
-function handleLoadButton() {
-  console.log("hit");
+function togglePages() {
+  console.log("toggle pages");
   document.body.style.overflow = "visible";
   const loadPage = document.getElementById("loadPage");
-  loadPage.style.visibility = "hidden";
-  loadPage.style.zIndex = -999;
+  const fullPage = document.getElementById("fullPage");
+  loadPage.classList.toggle("hide");
+  fullPage.classList.toggle("show");
 }
