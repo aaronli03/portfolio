@@ -16,7 +16,7 @@ body {
   background-color: var(--black-one);
   padding: 0;
   margin: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 h1 {
   color: var(--blue);
@@ -33,58 +33,6 @@ h1 {
   pointer-events: none;
   mix-blend-mode: difference;
 }
-
-/* Loading Page */
-#loadPage {
-  position: sticky;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-}
-#loadContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.cat {
-  max-width: 10rem;
-}
-.eyes, .eyes img{
-  position: absolute;
-  transition: rotate 1s;
-}
-.eye{
-  height: 1.2rem;
-}
-#loadButton {
-  border: solid var(--white-one) 0.1rem;
-  background-color: var(--black-one);
-  color: var(--white-one);
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  transition: background-color 0.4s, color 0.4s;
-  cursor: none;
-}
-#loadButton:hover {
-  color: var(--black-one);
-  background-color: var(--white-one);
-}
-#loadButton span {
-  font-family: var(--primary-font);
-  font-size: 1.5rem;
-}
-
-/* Full Page */
-#fullPage {
-  position: relative;
-  /* visibility: hidden; */
-  margin: 0;
-  padding: 0;
-}
-
 /*
 uncomment to hide scrollbar
 ::-webkit-scrollbar {

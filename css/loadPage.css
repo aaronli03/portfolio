@@ -1,0 +1,44 @@
+#loadPage {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+#loadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loadButton {
+  border: solid var(--white-one) 0.1rem;
+  background-color: var(--black-one);
+  color: var(--white-one);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  transition: background-color 0.4s, color 0.4s;
+  cursor: none;
+}
+#loadButton:hover {
+  color: var(--black-one);
+  background-color: var(--white-one);
+}
+#loadButton span {
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+}
+.cat {
+  max-width: 10rem;
+}
+.eyes {
+  position: relative;
+}
+.leftEye,
+.rightEye {
+  transform: translate(-50%, -50%);
+  height: 0.7rem;
+  position: fixed;
+  transition: 0.2s;
+}

@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="/static/portfolio-cat-white-no-eyes.png" type="image/x-icon">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="/css/globals.css" />
+    <link rel="stylesheet" href="/css/loadPage.css" />
 
-    <title>Document</title>
+    <link rel="icon" href="/static/images/portfolio-cat-white-no-eyes.png" type="image/x-icon">
+    <script src="/static/js/script.js" defer></script>
+    <script src="/static/js/loadPage.js" defer></script>
+    <title>Aaron's Portfolio</title>
   </head>
   <body>
     <div id="loadPage">
       <div id="loadContainer">
         <div class="catContainer">
-            <img class="cat" src="/static/portfolio-cat-white-no-eyes-2.png" />
+            <img class="cat" src="/static/images/portfolio-cat-white-no-eyes-2.png" />
             <div class = "eyes">
-                <img class="eye" src="/static/portfolio-cat-white-eye.png" style="left: 123px;
-                top: -110px;"/>
-                <img class="eye" src="/static/portfolio-cat-white-eye.png" style="left: 100px;
-                top: -112px;"/>
+                <img class="rightEye" src="/static/images/portfolio-cat-white-eye-2.png"/>
+                <img class="leftEye" src="/static/images/portfolio-cat-white-eye-2.png"/>
             </div>
         </div>
-        <button id="loadButton"><span>MEET ME</span></button>
+        <button onclick="handleLoadButton()" id="loadButton"><span>MEET ME</span></button>
       </div>
     </div>
-    <!-- <div id="fullPage">
+    <div id="fullPage">
         <div id="fullContainer">
             <section id="landing">
                 <h1>Landing</h1>
@@ -42,8 +42,7 @@
                 <h1>Contact</h1>
               </section>
         </div>
-    </div> -->
+    </div>
     <div id="cursor"></div>
-
   </body>
 </html>
