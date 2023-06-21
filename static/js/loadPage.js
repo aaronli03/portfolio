@@ -1,8 +1,17 @@
 window.addEventListener("resize", setDefaultEyes);
 window.addEventListener("load", function () {
   const loadPage = document.getElementById("loadPage");
-  loadPage.style.animation = "loadInAnimation 0.5s ease";
-  setDefaultEyes();
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+
+  // loadPage.style.animation = "loadInAnimation 0.5s ease";
+  this.setTimeout(function(){
+    setDefaultEyes();
+
+  }, 1000)
 });
 
 function setDefaultEyes() {
@@ -11,10 +20,10 @@ function setDefaultEyes() {
     const catRect = cat.getBoundingClientRect();
     const leftEye = document.querySelector(".leftEye");
     const rightEye = document.querySelector(".rightEye");
-    leftEye.style.left = catRect.left + 109 + "px";
-    leftEye.style.top = catRect.top + 61 + "px";
-    rightEye.style.left = catRect.left + 132 + "px";
-    rightEye.style.top = catRect.top + 62 + "px";
+    leftEye.style.left = catRect.left + 65 + "px";
+    leftEye.style.top = catRect.top + 37 + "px";
+    rightEye.style.left = catRect.left + 79 + "px";
+    rightEye.style.top = catRect.top + 38 + "px";
     leftEye.classList.add("show");
     rightEye.classList.add("show");
   }, 500);
@@ -29,10 +38,10 @@ document.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
   const mouseY = e.clientY;
   //left eye
-  const leftEyeminX = catRect.left + 104;
-  const leftEyemaxX = catRect.left + 114;
-  const leftEyeminY = catRect.top + 56;
-  const leftEyemaxY = catRect.top + 67;
+  const leftEyeminX = catRect.left + 62;
+  const leftEyemaxX = catRect.left + 68;
+  const leftEyeminY = catRect.top + 32;
+  const leftEyemaxY = catRect.top + 40;
   const leftEyerestrictedX = Math.min(
     Math.max(mouseX, leftEyeminX),
     leftEyemaxX
@@ -44,10 +53,10 @@ document.addEventListener("mousemove", (e) => {
   leftEye.style.left = leftEyerestrictedX + "px";
   leftEye.style.top = leftEyerestrictedY + "px";
   //right eye
-  const rightEyeminX = catRect.left + 127;
-  const rightEyemaxX = catRect.left + 137;
-  const rightEyeminY = catRect.top + 56;
-  const rightEyemaxY = catRect.top + 67;
+  const rightEyeminX = catRect.left + 76;
+  const rightEyemaxX = catRect.left + 82;
+  const rightEyeminY = catRect.top + 32;
+  const rightEyemaxY = catRect.top + 40;
   const rightEyerestrictedX = Math.min(
     Math.max(mouseX, rightEyeminX),
     rightEyemaxX

@@ -10,14 +10,6 @@
   opacity: 1;
   visibility: visible;
 }
-@keyframes loadInAnimation {
-  from{
-    transform: translateY(2%);
-  }
-  to{
-    transform: translateY(0%);
-  }
-}
 #loadPage.hide{
   opacity: 0;
   visibility: hidden;
@@ -32,10 +24,13 @@
   border: solid var(--white-one) 0.1rem;
   background-color: var(--black-one);
   color: var(--white-one);
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
+  margin-top: 0.5rem;
   border-radius: 1rem;
   transition: background-color 0.4s, color 0.4s;
   cursor: none;
+  opacity: 0;
+  animation: loadInAnimation 0.5s 1s ease forwards;
 }
 #loadButton:hover {
   color: var(--black-one);
@@ -43,11 +38,24 @@
 }
 #loadButton span {
   font-family: var(--primary-font);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+@keyframes loadInAnimation {
+  0%{
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 .cat {
-  max-width: 10rem;
-  animation: loadInAnimation 0.5s ease;
+  max-width: 6rem;
+  opacity: 0;
+  animation: loadInAnimation 1s ease forwards;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
 }
 .eyes {
   position: relative;
@@ -55,11 +63,11 @@
 .leftEye,
 .rightEye {
   transform: translate(-50%, -50%);
-  height: 0.7rem;
+  height: 0.4rem;
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 .leftEye.show, .rightEye.show{
   opacity: 1;
