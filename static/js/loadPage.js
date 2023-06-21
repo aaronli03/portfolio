@@ -6,12 +6,7 @@ window.addEventListener("load", function () {
     left: 0,
     behavior: 'smooth'
   });
-
-  // loadPage.style.animation = "loadInAnimation 0.5s ease";
-  this.setTimeout(function(){
-    setDefaultEyes();
-
-  }, 1000)
+  setDefaultEyes();
 });
 
 function setDefaultEyes() {
@@ -26,12 +21,11 @@ function setDefaultEyes() {
     rightEye.style.top = catRect.top + 38 + "px";
     leftEye.classList.add("show");
     rightEye.classList.add("show");
-  }, 500);
+  }, 1500);
 }
 
 document.addEventListener("mousemove", (e) => {
   const cat = document.querySelector(".cat");
-
   const catRect = cat.getBoundingClientRect();
   const leftEye = document.querySelector(".leftEye");
   const rightEye = document.querySelector(".rightEye");
@@ -73,14 +67,7 @@ document.addEventListener("mousemove", (e) => {
 const loadButton = document.getElementById("loadButton");
 loadButton.addEventListener("mouseover", hideCursor);
 loadButton.addEventListener("mouseout", showCursor);
-function hideCursor() {
-  cursor.style.visibility = "hidden";
-}
-function showCursor() {
-  cursor.style.visibility = "visible";
-}
 function togglePages() {
-  console.log("toggle pages");
   document.body.style.overflow = "visible";
   const loadPage = document.getElementById("loadPage");
   const fullPage = document.getElementById("fullPage");

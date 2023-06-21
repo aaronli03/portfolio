@@ -4,9 +4,11 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";
 });
-document.addEventListener("mouseleave", (e) =>{
+document.addEventListener("mouseleave", hideCursor)
+document.addEventListener("mouseenter", showCursor)
+function hideCursor(){
   cursor.style.transform = 'scale(0)';
-})
-document.addEventListener("mouseenter", (e) =>{
+}
+function showCursor(){
   cursor.style.transform = 'scale(1)';
-})
+}
