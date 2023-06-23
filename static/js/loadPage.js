@@ -1,6 +1,5 @@
 window.addEventListener("resize", setDefaultEyes);
 window.addEventListener("load", function () {
-  const loadPage = document.getElementById("loadPage");
   window.scroll({
     top: 0,
     left: 0,
@@ -21,7 +20,7 @@ function setDefaultEyes() {
     rightEye.style.top = catRect.top + 38 + "px";
     leftEye.classList.add("show");
     rightEye.classList.add("show");
-  }, 1500);
+  }, 1400);
 }
 
 document.addEventListener("mousemove", (e) => {
@@ -71,6 +70,8 @@ function togglePages() {
   document.body.style.overflow = "visible";
   const loadPage = document.getElementById("loadPage");
   const fullPage = document.getElementById("fullPage");
+  const header = document.querySelector('header');
   loadPage.classList.toggle("hide");
   fullPage.classList.toggle("show");
+  header.classList.toggle("show");
 }

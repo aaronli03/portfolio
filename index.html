@@ -6,8 +6,13 @@
     <link rel="stylesheet" href="/css/globals.css" />
     <link rel="stylesheet" href="/css/loadPage.css" />
     <link rel="stylesheet" href="/css/fullPage.css" />
+    <link rel="stylesheet" href="/css/header.css" />
 
-    <link rel="icon" href="/static/images/portfolio-cat-white-no-eyes.png" type="image/x-icon">
+    <link
+      rel="icon"
+      href="/static/images/portfolio-cat-white.png"
+      type="image/x-icon"
+    />
     <script src="/static/js/script.js" defer></script>
     <script src="/static/js/loadPage.js" defer></script>
     <title>Aaron's Portfolio</title>
@@ -16,34 +21,67 @@
     <div id="loadPage" class="show">
       <div id="loadContainer">
         <div class="catContainer">
-            <img class="cat" src="/static/images/portfolio-cat-white-no-eyes-2.png" />
-            <div class = "eyes">
-                <img class="rightEye" src="/static/images/portfolio-cat-white-eye-2.png"/>
-                <img class="leftEye" src="/static/images/portfolio-cat-white-eye-2.png"/>
-            </div>
+          <img
+            class="cat"
+            src="/static/images/portfolio-cat-white-no-eyes-2.png"
+          />
+          <div class="eyes">
+            <img
+              class="rightEye"
+              src="/static/images/portfolio-cat-white-eye-2.png"
+            />
+            <img
+              class="leftEye"
+              src="/static/images/portfolio-cat-white-eye-2.png"
+            />
+          </div>
         </div>
-        <button onclick="togglePages()" id="loadButton"><span>MEET ME</span></button>
+        <button onclick="togglePages()" id="loadButton">
+          <span>MEET AARON</span>
+        </button>
       </div>
     </div>
+    <header>
+      <img src="/static/images/portfolio-cat-white.png" onclick="location.reload()" id="icon"/>
+      <nav id="navWrapper">
+        <ul id="nav">
+          <li>
+            <a href="#landing" class="listItemHolder">
+              <span class="listActive">ABOUT</span>
+              <span class="listInactive">ABOUT</span>
+            </a>
+          </li>
+          <li><a href="#projects" class="listItemHolder">
+            <span class="listActive">PROJECTS</span>
+            <span class="listInactive">PROJECTS</span>
+          </a></li>
+          <li><a href="#contact" class="listItemHolder">
+            <span class="listActive">CONTACT</span>
+            <span class="listInactive">CONTACT</span>
+          </a></li>
+        </ul>
+      </nav>
+    </header>
     <div id="fullPage">
-        <div id="fullContainer">
-            <section id="landing">
-                <h1>Landing</h1>
-              </section>
-              <section id="about">
-                <h1>About</h1>
-              </section>
-              <section id="passions">
-                <h1>Passions</h1>
-              </section>
-              <section id="projects">
-                <h1>Projects</h1>
-              </section>
-              <section id="contact">
-                <h1>Contact</h1>
-              </section>
-        </div>
+      <div id="fullContainer">
+        <section id="landing">
+          <h1>Landing</h1>
+        </section>
+        <section id="about">
+          <h1>About</h1>
+        </section>
+        <section id="passions">
+          <h1>Passions</h1>
+        </section>
+        <section id="projects">
+          <h1>Projects</h1>
+        </section>
+        <section id="contact">
+          <h1>Contact</h1>
+        </section>
+      </div>
     </div>
+    <footer></footer>
     <div id="cursor"></div>
   </body>
 </html>
