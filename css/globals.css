@@ -24,6 +24,15 @@ h1 {
   margin: 0 0 0 15rem;
   padding: 10rem;
 }
+ul{
+  list-style: none;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  cursor: inherit;
+
+}
 #cursor {
   position: fixed;
   width: 1.5rem;
@@ -34,6 +43,8 @@ h1 {
   pointer-events: none;
   transform: scale(1);
   transition: transform 0.2s;
+  mix-blend-mode: difference;
+
 }
 section{
   height: 100vh;

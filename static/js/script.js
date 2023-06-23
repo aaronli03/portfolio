@@ -35,7 +35,7 @@ navLinks.forEach((link) => {
       `#nav a[href="${currentLinkId}"] span`
     );
     currentText.forEach((span) => {
-      if(!span.classList.contains('active')){
+      if (!span.classList.contains("active")) {
         span.classList.add("active");
       }
     });
@@ -46,7 +46,7 @@ navLinks.forEach((link) => {
       `#nav a[href="${currentLinkId}"] span`
     );
     currentText.forEach((span) => {
-      if(!span.classList.contains('focus')){
+      if (!span.classList.contains("focus")) {
         span.classList.remove("active");
       }
     });
@@ -76,6 +76,8 @@ window.addEventListener("scroll", () => {
   });
 });
 
-const icon = document.getElementById('icon');
-icon.addEventListener('mouseenter', hideCursor)
-icon.addEventListener('mouseleave', showCursor)
+const cursorContent = document.querySelectorAll(".cursorContent");
+cursorContent.forEach((element) => {
+  element.addEventListener("mouseenter", hideCursor);
+  element.addEventListener("mouseleave", showCursor);
+});

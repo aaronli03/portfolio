@@ -62,16 +62,14 @@ document.addEventListener("mousemove", (e) => {
   rightEye.style.top = rightEyerestrictedY + "px";
 });
 
-//meet me button
-const loadButton = document.getElementById("loadButton");
-loadButton.addEventListener("mouseover", hideCursor);
-loadButton.addEventListener("mouseout", showCursor);
 function togglePages() {
   document.body.style.overflow = "visible";
   const loadPage = document.getElementById("loadPage");
   const fullPage = document.getElementById("fullPage");
   const header = document.querySelector('header');
+  const footer = document.querySelector('footer');
   loadPage.classList.toggle("hide");
   fullPage.classList.toggle("show");
   header.classList.toggle("show");
+  footer.classList.toggle("show");
 }
