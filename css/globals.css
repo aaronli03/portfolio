@@ -43,7 +43,7 @@ a{
   pointer-events: none;
   transform: scale(1);
   transition: transform 0.2s;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 
 }
 section{

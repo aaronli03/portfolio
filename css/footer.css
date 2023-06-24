@@ -9,6 +9,7 @@ footer {
   opacity: 0;
   cursor: none;
   bottom: 0;
+  transition: ease 1s;
 }
 footer.show {
   opacity: 1;
@@ -16,13 +17,15 @@ footer.show {
 }
 #githubIcon,
 #linkedinIcon,
-#instagramIcon {
-  height: 1.5rem;
-  margin-bottom: 1rem;
+#instagramIcon,
+#resumeIcon {
+  height: 2rem;
+  margin-bottom: 2rem;
   transition: 0.5s;
 }
 #githubIcon:hover,
 #linkedinIcon:hover,
-#instagramIcon:hover {
+#instagramIcon:hover,
+#resumeIcon:hover {
     transform: scale(1.5);
 }

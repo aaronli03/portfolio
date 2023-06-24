@@ -8,13 +8,14 @@ header {
   visibility: hidden;
   opacity: 0;
   cursor: none;
+  transition: ease 1s;
 }
 header.show {
   opacity: 1;
   visibility: visible;
 }
 #homeIcon {
-  height: 3rem;
+  height: 4rem;
   transition: 0.3s;
 }
 #homeIcon:hover {
@@ -30,9 +31,10 @@ header.show {
   flex-direction: column;
   align-items: end;
 }
-a {
+#nav a {
   color: var(--blue);
   font-family: var(--primary-font);
+  font-size: 1.5rem;
 }
 .listItemHolder {
   position: relative;
