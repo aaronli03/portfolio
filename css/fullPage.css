@@ -13,3 +13,30 @@
   opacity: 1;
   visibility: visible;
 }
+.block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+#fullWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  color: var(--white-two);
+  font-family: var(--primary-font);
+  font-size: 8rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+#aboutOne p{
+  color: var(--blue);
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  margin-top: 8rem;
+  position: absolute;
+}
