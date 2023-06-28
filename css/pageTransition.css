@@ -1,0 +1,34 @@
+
+.pageTransition {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: -100%;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    background: var(--blue);
+    transition: all 1s cubic-bezier(0.6, 0.05, 0.4, 1);
+    visibility: visible;
+    z-index: 999;
+  }
+  .pageTransition.active {
+    top: 200%;
+    visibility: hidden;
+  }
+.ptLayerTwo {
+  background-color: var(--black-two);
+  transition-delay: 0.1s;
+}
+.ptLayerThree {
+  background-color: var(--white-two);
+  transition-delay: 0.2s;
+}
+.ptLayerFour {
+  background-color: var(--black-one);
+  transition-delay: 0.3s;
+}
+/* .ptLayerFive {
+  background-color: var(--black-one);
+  transition-delay: 0.8s;
+} */

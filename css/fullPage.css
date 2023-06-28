@@ -30,7 +30,7 @@ h1 {
   color: var(--white-two);
   font-family: var(--primary-font);
   font-size: 8rem;
-  margin-bottom: 4rem;
+  margin: 0 0 4rem 0;
   position: relative;
 }
 #aboutOne p{

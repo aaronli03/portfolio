@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
   window.scroll({
     top: 0,
     left: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
   setDefaultEyes();
 });
@@ -63,13 +63,32 @@ document.addEventListener("mousemove", (e) => {
 });
 
 function togglePages() {
-  document.body.style.overflow = "visible";
+  let timeoutOne = 400;
+  let timeoutTwo = 1100
   const loadPage = document.getElementById("loadPage");
   const fullPage = document.getElementById("fullPage");
-  const header = document.querySelector('header');
-  const footer = document.querySelector('footer');
-  loadPage.classList.toggle("hide");
-  fullPage.classList.toggle("show");
-  header.classList.toggle("show");
-  footer.classList.toggle("show");
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
+  const transitionPages = document.querySelectorAll(".pageTransition");
+  for (const page of transitionPages) {
+    page.classList.toggle("active");
+  }
+  if(!loadPage.classList.contains("show")){
+    timeoutOne = 1500;
+    timeoutTwo = 400;
+  }
+  setTimeout(function (){
+    loadPage.classList.toggle("show");
+    const cat = document.querySelector(".cat");
+    cat.classList.toggle("test");
+  }, timeoutOne)
+  setTimeout(function (){
+    document.body.style.overflow = "visible";
+    fullPage.classList.toggle("show");
+    header.classList.toggle("show");
+    footer.classList.toggle("show");
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 500)
+  }, timeoutTwo)
 }

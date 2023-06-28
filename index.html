@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/fullPage.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/pageTransition.css" />
 
     <link
       rel="icon"
@@ -19,6 +20,13 @@
     <title>Aaron's Portfolio</title>
   </head>
   <body>
+    <div id="pageTransitionContainer">
+      <div class="pageTransition ptLayerOne"></div>
+      <div class="pageTransition ptLayerTwo"></div>
+      <div class="pageTransition ptLayerThree"></div>
+      <div class="pageTransition ptLayerFour"></div>
+      <!-- <div class="pageTransition ptLayerFive"></div> -->
+    </div>
     <div id="loadPage" class="show">
       <div id="loadContainer">
         <div class="catContainer">
@@ -43,7 +51,7 @@
       </div>
     </div>
     <header>
-      <img src="/static/images/portfolio-cat-white.png" onclick="location.reload()" id="homeIcon" class="cursorContent"/>
+      <img src="/static/images/portfolio-cat-white.png" onclick="togglePages()" id="homeIcon" class="cursorContent"/>
       <nav id="navWrapper">
         <ul id="nav">
           <li>
