@@ -15,17 +15,16 @@ footer.show {
   opacity: 1;
   visibility: visible;
 }
-#githubIcon,
-#linkedinIcon,
-#instagramIcon,
-#resumeIcon {
-  height: 2rem;
-  margin-bottom: 2rem;
+.socialIcon {
   transition: 0.5s;
+  margin-top: 2.5rem;
 }
-#githubIcon:hover,
-#linkedinIcon:hover,
-#instagramIcon:hover,
-#resumeIcon:hover {
-    transform: scale(1.5);
+.socialIcon svg{
+  height: 2rem;
+}
+.socialIcon:hover {
+  transform: scale(1.5);
+}
+.socialIcon:hover .b {
+  fill: var(--white-one);
 }
