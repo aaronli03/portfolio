@@ -4,16 +4,15 @@
   display: flex;
   top: 0;
   left: 0;
-  transition: 1s;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s;
-}
+} 
 #fullPage.show {
   opacity: 1;
   visibility: visible;
 }
-.block{
+.block {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,22 +20,68 @@
   height: 100vh;
   width: 100vw;
 }
-#fullWrapper{
+#fullWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-h1 {
+@keyframes showTopContent {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 20%);
+  }
+}
+@keyframes showBotContent {
+  0% {
+    transform: translate(0, -100%);
+  }
+  100% {
+    transform: translate(0, -20%);
+  }
+}
+.showTop{
+  animation: showTopContent 1s forwards
+}
+.showBot{
+  animation: showBotContent 0.5s 0.5s forwards
+}
+.testing {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.testing div {
+  height: 50%;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.topContent div {
+  height: auto;
   color: var(--white-two);
   font-family: var(--primary-font);
   font-size: 8rem;
-  margin: 0 0 4rem 0;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, 100%);
 }
-#aboutOne p{
+.botContent div{
+  height: auto;
   color: var(--blue);
   font-family: var(--secondary-font);
   font-size: 3rem;
-  margin-top: 8rem;
   position: absolute;
+  top: 0;
+  transform: translate(0, -100%);
+}
+.testing div.topContent {
+  top: 0;
+}
+.testing > div.botContent {
+  bottom: 0;
 }

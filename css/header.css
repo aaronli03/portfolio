@@ -48,7 +48,6 @@ header.show {
   clip-path: inset(100% 0 0 0);
 }
 .listInactive {
-  display: block;
   transition: 0.5s;
   clip-path: inset(0 0 0 0);
 }

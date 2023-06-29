@@ -25,6 +25,13 @@ a{
   text-decoration: none;
   cursor: inherit;
 }
+h1 {
+  color: var(--white-two);
+  font-family: var(--primary-font);
+  font-size: 8rem;
+  margin: 0 0 4rem 0;
+  position: relative;
+}
 #cursor {
   position: fixed;
   width: 1.5rem;

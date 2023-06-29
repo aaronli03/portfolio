@@ -1,10 +1,5 @@
 window.addEventListener("resize", setDefaultEyes);
 window.addEventListener("load", function () {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
   setDefaultEyes();
 });
 
@@ -70,23 +65,25 @@ function togglePages() {
   const header = document.querySelector("header");
   const footer = document.querySelector("footer");
   const transitionPages = document.querySelectorAll(".pageTransition");
+  const testingTop = document.querySelector('.topContent div')
+const testingBot = document.querySelector('.botContent div')
   for (const page of transitionPages) {
     page.classList.toggle("active");
   }
   if(!loadPage.classList.contains("show")){
-    timeoutOne = 1500;
+    timeoutOne = 1100;
     timeoutTwo = 400;
   }
-  setTimeout(function (){
+  setTimeout(() =>{
     loadPage.classList.toggle("show");
-    const cat = document.querySelector(".cat");
-    cat.classList.toggle("test");
   }, timeoutOne)
-  setTimeout(function (){
+  setTimeout(() => {
     document.body.style.overflow = "visible";
     fullPage.classList.toggle("show");
     header.classList.toggle("show");
     footer.classList.toggle("show");
+    testingTop.classList.toggle("showTop");
+    testingBot.classList.toggle("showBot");
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 500)
