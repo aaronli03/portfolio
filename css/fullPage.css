@@ -7,23 +7,32 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s;
-} 
+}
 #fullPage.show {
   opacity: 1;
   visibility: visible;
 }
 .block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   width: 100vw;
+  margin-left: 15vw;
 }
 #fullWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#aboutOne {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+h1 {
+  color: var(--white-two);
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  position: relative;
 }
 @keyframes showTopContent {
   0% {
@@ -41,18 +50,18 @@
     transform: translate(0, -20%);
   }
 }
-.showTop{
-  animation: showTopContent 1s forwards
+.showTop {
+  animation: showTopContent 1s forwards;
 }
-.showBot{
-  animation: showBotContent 0.5s 0.5s forwards
+.showBot {
+  animation: showBotContent 0.5s 0.5s forwards;
 }
-.testing {
+.aboutOneContent {
   height: 100%;
   position: relative;
   width: 100%;
 }
-.testing div {
+.aboutOneContent div {
   height: 50%;
   display: flex;
   overflow: hidden;
@@ -70,7 +79,7 @@
   bottom: 0;
   transform: translate(0, 100%);
 }
-.botContent div{
+.botContent div {
   height: auto;
   color: var(--blue);
   font-family: var(--secondary-font);
@@ -79,9 +88,41 @@
   top: 0;
   transform: translate(0, -100%);
 }
-.testing div.topContent {
+.aboutOneContent div.topContent {
   top: 0;
 }
-.testing > div.botContent {
+.aboutOneContent > div.botContent {
   bottom: 0;
+}
+#aboutTwo{
+  height: auto;
+  padding: 5vh 0 30vh 0;
+  width: 75vw;
+}
+.aboutMeParagraph {
+  color: darkgray;
+  font-family: var(--primary-font);
+  font-size: 4rem;
+}
+.mask{
+  color: var(--blue);
+  position: absolute;
+  width: 75vw;
+}
+.passionsScroll{
+  font-family: var(--primary-font);
+  font-size: 10rem;
+  white-space: nowrap;
+  width: 80vw;
+  overflow:auto;
+  color: var(--blue);
+}
+.aboutThreeLine{
+
+}
+#projects{
+  height: 100vh;
+}
+#contact{
+  height: 100vh;
 }

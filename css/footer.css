@@ -8,8 +8,13 @@ footer {
   visibility: hidden;
   opacity: 0;
   cursor: none;
-  bottom: 0;
+  top:100vh;
   transition: ease 0.5s;
+}
+#socials{
+  transform: translateY(-160%);
+  margin-bottom: 2rem;
+  position: relative;
 }
 footer.show {
   opacity: 1;

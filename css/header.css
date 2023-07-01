@@ -9,10 +9,15 @@ header {
   opacity: 0;
   cursor: none;
   transition: ease 1s;
+  bottom: 100%;
 }
 header.show {
   opacity: 1;
   visibility: visible;
+}
+#homeIconWrapper{
+  transform: translateY(170%);
+  position: relative;
 }
 #homeIcon {
   height: 4rem;
@@ -22,6 +27,8 @@ header.show {
   transform: scale(1.5);
 }
 #navWrapper {
+  transform: translateY(170%);
+  position: relative;
   z-index: 1;
   cursor: none;
 }
@@ -34,7 +41,7 @@ header.show {
 #nav a {
   color: var(--blue);
   font-family: var(--primary-font);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .listItemHolder {
   position: relative;
