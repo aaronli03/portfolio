@@ -13,7 +13,6 @@
   visibility: visible;
 }
 .block {
-  height: 100vh;
   width: 100vw;
   margin-left: 15vw;
 }
@@ -26,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   margin: 0;
 }
 h1 {
@@ -109,6 +109,9 @@ h1 {
   position: absolute;
   width: 75vw;
 }
+#aboutThree{
+  height: 80vh;
+}
 .passionsScroll{
   font-family: var(--primary-font);
   font-size: 10rem;
@@ -121,11 +124,12 @@ h1 {
 
 }
 #projects{
-  height: 100vh;
+  height: 200vh;
   position: relative;
 }
 .projectComponent{
-
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .projectTitle{
   font-family: var(--primary-font);
@@ -142,6 +146,24 @@ h1 {
   font-size: 1rem;
   color: darkgray;
 }
+.projectButtonsWrapper{
+  margin-top: 0.8rem;
+}
+.projectButton{
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: lightgray;
+  border-radius: 0.5rem;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.projectDescription{
+  margin-top: 2rem;
+  width: 60vw;
+  color: var(--white-two);
+  font-size: 2rem;
+}
 #contact{
-  height: 100vh;
+  height: 70vh;
 }

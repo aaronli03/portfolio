@@ -12,12 +12,15 @@ function hideCursor() {
 function showCursor() {
   cursor.style.transform = "scale(1) translate(-50%, -50%)";
 }
-//header
+window.addEventListener("resize", function () {
+  const fontSize = window.innerWidth / 120;
+  document.documentElement.style.fontSize = `${fontSize}px`;
+});
+
 const navLinks = document.querySelectorAll("#nav a");
 const sections = document.querySelectorAll("section");
 const navSpans = document.querySelectorAll(`#nav span`);
 
-// Add click event listeners to the navigation links
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -53,12 +56,12 @@ navLinks.forEach((link) => {
   });
 });
 window.addEventListener("scroll", () => {
-  const fromTop = window.scrollY;
-  // Find the currently visible section
+  const fromTop = window.scrollY + window.innerHeight;
   let currentSection = sections[0];
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 1;
-    if (sectionTop <= fromTop) {
+    const sectionTop = section.offsetTop;
+    const sectionBot = sectionTop + section.offsetHeight;
+    if (fromTop > sectionTop && fromTop <= sectionBot) {
       currentSection = section;
     }
   });
