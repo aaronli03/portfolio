@@ -165,5 +165,27 @@ h1 {
   font-size: 2rem;
 }
 #contact{
-  height: 70vh;
+  height: 80vh;
+  padding-bottom: 6rem;
+}
+#contactText{
+  font-family: var(--primary-font);
+  color: var(--blue);
+  font-size: 8rem;
+}
+#contactSubtext{
+  font-family: var(--secondary-font);
+  color: var(--white-two);
+  font-size: 1.5rem;
+  transform: translateY(-2rem);
+}
+#contactButtons{
+  display: flex;
+  flex-direction: column;
+}
+#contactButtons a{
+  margin: 1rem 0;
+  font-family: var(--secondary-font);
+  color: var(--blue);
+  font-size: 3rem;
 }

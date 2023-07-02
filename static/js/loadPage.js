@@ -58,6 +58,8 @@ document.addEventListener("mousemove", (e) => {
 });
 
 function togglePages() {
+  const audio = document.getElementById('audio');
+  audio.play();
   let timeoutOne = 400;
   let timeoutTwo = 1100
   const loadPage = document.getElementById("loadPage");
@@ -73,6 +75,7 @@ const testingBot = document.querySelector('.botContent div')
   if(!loadPage.classList.contains("show")){
     timeoutOne = 1100;
     timeoutTwo = 400;
+    audio.pause();
   }
   setTimeout(() =>{
     loadPage.classList.toggle("show");
