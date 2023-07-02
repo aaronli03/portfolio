@@ -29,7 +29,6 @@
   margin-top: 0.5rem;
   border-radius: 1rem;
   transition: background-color 0.4s, color 0.4s;
-  cursor: none;
   opacity: 0;
   animation: loadInAnimation 0.5s 1s ease forwards;
 }
@@ -55,7 +54,6 @@
   max-width: 6rem;
   opacity: 0;
   animation: loadInAnimation 1s ease forwards;
-  animation-fill-mode: forwards;
   animation-delay: 0.5s;
 }
 .eyes {

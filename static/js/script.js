@@ -1,3 +1,6 @@
+window.onbeforeunload = function() {
+  window.scrollTo(0, 0);
+}
 const cursor = document.getElementById("cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -12,10 +15,14 @@ function hideCursor() {
 function showCursor() {
   cursor.style.transform = "scale(1) translate(-50%, -50%)";
 }
-window.addEventListener("resize", function () {
+window.addEventListener("resize", reCalculateSize);
+window.addEventListener("load", reCalculateSize);
+
+
+function reCalculateSize(){
   const fontSize = window.innerWidth / 120;
   document.documentElement.style.fontSize = `${fontSize}px`;
-});
+}
 
 const navLinks = document.querySelectorAll("#nav a");
 const sections = document.querySelectorAll("section");

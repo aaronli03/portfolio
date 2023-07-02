@@ -58,28 +58,28 @@ document.addEventListener("mousemove", (e) => {
 });
 
 function togglePages() {
-  const audio = document.getElementById('audio');
+  const audio = document.getElementById("audio");
   audio.play();
   let timeoutOne = 400;
-  let timeoutTwo = 1100
+  let timeoutTwo = 1100;
   const loadPage = document.getElementById("loadPage");
   const fullPage = document.getElementById("fullPage");
   const header = document.querySelector("header");
   const footer = document.querySelector("footer");
   const transitionPages = document.querySelectorAll(".pageTransition");
-  const testingTop = document.querySelector('.topContent div')
-const testingBot = document.querySelector('.botContent div')
+  const testingTop = document.querySelector(".topContent div");
+  const testingBot = document.querySelector(".botContent div");
   for (const page of transitionPages) {
     page.classList.toggle("active");
   }
-  if(!loadPage.classList.contains("show")){
+  if (!loadPage.classList.contains("show")) {
     timeoutOne = 1100;
     timeoutTwo = 400;
     audio.pause();
   }
-  setTimeout(() =>{
+  setTimeout(() => {
     loadPage.classList.toggle("show");
-  }, timeoutOne)
+  }, timeoutOne);
   setTimeout(() => {
     document.body.style.overflow = "visible";
     fullPage.classList.toggle("show");
@@ -89,6 +89,6 @@ const testingBot = document.querySelector('.botContent div')
     testingBot.classList.toggle("showBot");
     setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 500)
-  }, timeoutTwo)
+    }, 500);
+  }, timeoutTwo);
 }

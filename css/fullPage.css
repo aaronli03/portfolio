@@ -96,7 +96,7 @@ h1 {
 }
 #aboutTwo{
   height: auto;
-  padding: 5vh 0 30vh 0;
+  padding: 10rem 0 20rem 0;
   width: 75vw;
 }
 .aboutMeParagraph {
@@ -110,22 +110,26 @@ h1 {
   width: 75vw;
 }
 #aboutThree{
-  height: 80vh;
+  height: auto;
+  padding: 0 0 20rem 0;
 }
 .passionsScroll{
   font-family: var(--primary-font);
   font-size: 10rem;
   white-space: nowrap;
-  width: 70vw;
-  overflow:auto;
+  width: 80rem;
+  overflow: hidden;
   color: var(--blue);
 }
-.aboutThreeLine{
-
+.aboutThreeLineOne{
+  transform: translateX(-213%)
+}
+.aboutThreeLineTwo{
+  transform: translateX(-204%);
 }
 #projects{
-  height: 200vh;
-  position: relative;
+  height: auto;
+  padding: 0 0 10rem 0;
 }
 .projectComponent{
   margin-top: 5rem;
@@ -133,30 +137,33 @@ h1 {
 }
 .projectTitle{
   font-family: var(--primary-font);
-  font-size: 4rem;
+  font-size: 5rem;
   color: var(--blue);
 }
 .projectOneLine{
   font-family: var(--secondary-font);
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--white-two);
 }
 .projectTechnologies{
   font-family: var(--secondary-font);
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: darkgray;
 }
 .projectButtonsWrapper{
   margin-top: 0.8rem;
 }
 .projectButton{
-  border: none;
   padding: 0.5rem 1rem;
   background-color: lightgray;
   border-radius: 0.5rem;
   font-family: var(--primary-font);
   font-size: 1rem;
   margin-right: 1rem;
+  transition: transform 0.5s;
+}
+.projectButton:hover{
+  transform: scale(1.2);
 }
 .projectDescription{
   margin-top: 2rem;
@@ -165,7 +172,7 @@ h1 {
   font-size: 2rem;
 }
 #contact{
-  height: 80vh;
+  height: auto;
   padding-bottom: 6rem;
 }
 #contactText{

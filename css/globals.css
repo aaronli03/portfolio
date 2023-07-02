@@ -17,6 +17,10 @@ body {
   margin: 0;
   overflow: hidden;
 }
+button{
+  cursor: none;
+  border: none;
+}
 ul{
   list-style: none;
   padding: 0;
