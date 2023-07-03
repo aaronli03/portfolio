@@ -4,25 +4,22 @@ footer {
   justify-content: space-between;
   width: 90%;
   margin: 2% 5%;
-  z-index: 2;
-  visibility: hidden;
-  opacity: 0;
-  cursor: none;
   top:100vh;
+  opacity: 0;
   transition: ease 0.5s;
-}
-#socials{
-  transform: translateY(-160%);
-  margin-bottom: 2rem;
-  position: relative;
+  visibility: hidden;
 }
 footer.show {
   opacity: 1;
   visibility: visible;
 }
+#socials{
+  position: relative;
+  transform: translateY(-150%);
+}
 .socialIcon {
-  transition: 0.5s;
   margin-top: 2.5rem;
+  transition: 0.5s;
 }
 .socialIcon svg{
   height: 2rem;
