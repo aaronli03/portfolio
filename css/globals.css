@@ -21,10 +21,13 @@
   misc
 } */
 body {
-  background-color: var(--black-one);
   padding: 0;
   margin: 0;
+  background-color: var(--black-one);
   overflow: hidden;
+}
+body.active{
+  overflow: visible;
 }
 button{
   cursor: none;

@@ -2,37 +2,76 @@
 #fullPage {
   position: absolute;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 0;
   left: 0;
   opacity: 0;
+  transition: 0.5s;
   visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s;
 }
 #fullPage.show {
   opacity: 1;
   visibility: visible;
 }
 .block {
+  height: auto;
   width: 100vw;
   margin-left: 15vw;
 }
-#fullWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+h1 {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  color: var(--white-two);
 }
 #aboutOne {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   margin: 0;
 }
-h1 {
-  color: var(--white-two);
-  font-family: var(--secondary-font);
-  font-size: 2rem;
+.showTop {
+  animation: showTopContent 1s forwards;
+}
+.showBot {
+  animation: showBotContent 0.5s 0.5s forwards;
+}
+.aboutOneContent {
   position: relative;
+  height: 100%;
+  width: 100%;
+}
+.topContent,
+.botContent{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+}
+.topContent {
+  top: 0;
+}
+.botContent {
+  bottom: 0;
+}
+.topContent div {
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  color: var(--white-two);
+  font-family: var(--primary-font);
+  font-size: 8rem;
+  transform: translate(0, 100%);
+}
+.botContent div {
+  position: absolute;
+  top: 0;
+  height: auto;
+  color: var(--blue);
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  transform: translate(0, -100%);
 }
 @keyframes showTopContent {
   0% {
@@ -50,54 +89,8 @@ h1 {
     transform: translate(0, -20%);
   }
 }
-.showTop {
-  animation: showTopContent 1s forwards;
-}
-.showBot {
-  animation: showBotContent 0.5s 0.5s forwards;
-}
-.aboutOneContent {
-  height: 100%;
-  position: relative;
-  width: 100%;
-}
-.aboutOneContent div {
-  height: 50%;
-  display: flex;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-.topContent div {
-  height: auto;
-  color: var(--white-two);
-  font-family: var(--primary-font);
-  font-size: 8rem;
-  position: absolute;
-  bottom: 0;
-  transform: translate(0, 100%);
-}
-.botContent div {
-  height: auto;
-  color: var(--blue);
-  font-family: var(--secondary-font);
-  font-size: 3rem;
-  position: absolute;
-  top: 0;
-  transform: translate(0, -100%);
-}
-.aboutOneContent div.topContent {
-  top: 0;
-}
-.aboutOneContent > div.botContent {
-  bottom: 0;
-}
 #aboutTwo{
-  height: auto;
   padding: 10rem 0 20rem 0;
-  width: 75vw;
 }
 .aboutMeParagraph {
   color: darkgray;
@@ -107,19 +100,18 @@ h1 {
 .mask{
   color: var(--blue);
   position: absolute;
-  width: 75vw;
 }
 #aboutThree{
-  height: auto;
   padding: 0 0 20rem 0;
 }
 .passionsScroll{
+  width: 80rem;
   font-family: var(--primary-font);
   font-size: 10rem;
-  white-space: nowrap;
-  width: 80rem;
-  overflow: hidden;
   color: var(--blue);
+  overflow: hidden;
+  white-space: nowrap;
+
 }
 .aboutThreeLineOne{
   transform: translateX(-213%)
@@ -128,7 +120,6 @@ h1 {
   transform: translateX(-204%);
 }
 #projects{
-  height: auto;
   padding: 0 0 10rem 0;
 }
 .projectComponent{
@@ -155,24 +146,23 @@ h1 {
 }
 .projectButton{
   padding: 0.5rem 1rem;
-  background-color: lightgray;
-  border-radius: 0.5rem;
+  margin-right: 1rem;
   font-family: var(--primary-font);
   font-size: 1rem;
-  margin-right: 1rem;
+  background-color: lightgray;
   transition: transform 0.5s;
+  border-radius: 0.5rem;
 }
 .projectButton:hover{
   transform: scale(1.2);
 }
 .projectDescription{
-  margin-top: 2rem;
   width: 60vw;
-  color: var(--white-two);
+  margin-top: 2rem;
   font-size: 2rem;
+  color: var(--white-two);
 }
 #contact{
-  height: auto;
   padding-bottom: 6rem;
 }
 #contactText{
@@ -186,7 +176,7 @@ h1 {
   font-size: 1.5rem;
   transform: translateY(-2rem);
 }
-#contactButtons{
+#contactLinks{
   display: flex;
   flex-direction: column;
 }
