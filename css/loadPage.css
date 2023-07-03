@@ -1,44 +1,47 @@
 #loadPage {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
   height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
   opacity: 0;
-  visibility: hidden;
   transition: 0.5s;
+  visibility: hidden;
 }
 #loadPage.show{
   opacity: 1;
   visibility: visible;
 }
-#loadContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 #loadButton {
-  border: solid var(--white-one) 0.1rem;
   background-color: var(--black-one);
   color: var(--white-one);
   padding: 1rem 2.5rem;
   margin-top: 0.5rem;
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
   border-radius: 1rem;
-  transition: background-color 0.4s, color 0.4s;
   opacity: 0;
+  transition: background-color 0.4s, color 0.4s;
   animation: loadInAnimation 0.5s 1s ease forwards;
 }
 #loadButton:hover {
-  color: var(--black-one);
-  background-color: var(--white-one);
+  background-color: var(--blue);
 }
-#loadButton span {
-  font-family: var(--primary-font);
-  font-size: 1.2rem;
+.cat {
+  max-width: 6rem;
+  opacity: 0;
+  animation: loadInAnimation 1s 0.5s ease forwards;
+}
+.catBackground{
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background-color: #eeeeee;
 }
 @keyframes loadInAnimation {
   0%{
@@ -49,26 +52,4 @@
     transform: translateY(0%);
     opacity: 1;
   }
-}
-.cat {
-  max-width: 6rem;
-  opacity: 0;
-  animation: loadInAnimation 1s ease forwards;
-  animation-delay: 0.5s;
-}
-.eyes {
-  position: relative;
-}
-.leftEye,
-.rightEye {
-  transform: translate(-50%, -50%);
-  height: 0.4rem;
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  transition: 0.1s;
-}
-.leftEye.show, .rightEye.show{
-  opacity: 1;
-  visibility: visible;
 }
