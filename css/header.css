@@ -15,9 +15,12 @@ header.show {
   opacity: 1;
   visibility: visible;
 }
-#homeIconWrapper{
-  transform: translateY(170%);
+#headerWrapper{
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  transform: translateY(210%);
 }
 #homeIcon {
   height: 4rem;
@@ -26,14 +29,7 @@ header.show {
 #homeIcon:hover {
   transform: scale(1.5);
 }
-#navWrapper {
-  transform: translateY(170%);
-  position: relative;
-  z-index: 1;
-  cursor: none;
-}
 #nav {
-  color: var(--blue);
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -43,30 +39,22 @@ header.show {
   font-family: var(--primary-font);
   font-size: 1.2rem;
 }
-.listItemHolder {
-  position: relative;
-}
 .listActive {
-  color: var(--white-two);
   position: absolute;
+  color: var(--white-two);
   transform: translate(0, -55%);
-  visibility: hidden;
   transition: translate 0.5s;
+  visibility: hidden;
   clip-path: inset(100% 0 0 0);
-}
-.listInactive {
-  transition: 0.5s;
-  clip-path: inset(0 0 0 0);
 }
 .listInactive.active {
   visibility: hidden;
   transform: translate(0, 55%);
   transition: translate 0.5s;
-  clip-path: inset(100% 0 0 0);
 }
 .listActive.active {
   transform: translate(0, 0);
-  visibility: visible;
   transition: 0.5s;
+  visibility: visible;
   clip-path: inset(0 0 0 0);
 }
