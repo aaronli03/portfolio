@@ -10,37 +10,45 @@
   transition: 0.5s;
   visibility: hidden;
 }
+
 #fullPage.show {
   opacity: 1;
   visibility: visible;
 }
+
 .block {
   height: auto;
   width: 100vw;
-  margin-left: 15vw;
+  padding-left: 15vw;
 }
+
 h1 {
   font-family: var(--secondary-font);
   font-size: 2rem;
   color: var(--white-two);
 }
+
 #aboutOne {
   height: 100vh;
-  margin: 0;
+  padding: 0;
 }
+
 .showTop {
   animation: showTopContent 1s forwards;
 }
+
 .showBot {
   animation: showBotContent 0.5s 0.5s forwards;
 }
+
 .aboutOneContent {
   position: relative;
   height: 100%;
   width: 100%;
 }
+
 .topContent,
-.botContent{
+.botContent {
   position: absolute;
   display: flex;
   align-items: center;
@@ -49,12 +57,15 @@ h1 {
   width: 100%;
   overflow: hidden;
 }
+
 .topContent {
   top: 0;
 }
+
 .botContent {
   bottom: 0;
 }
+
 .topContent div {
   position: absolute;
   bottom: 0;
@@ -64,6 +75,7 @@ h1 {
   font-size: 8rem;
   transform: translate(0, 100%);
 }
+
 .botContent div {
   position: absolute;
   top: 0;
@@ -73,38 +85,47 @@ h1 {
   font-size: 3rem;
   transform: translate(0, -100%);
 }
+
 @keyframes showTopContent {
   0% {
     transform: translate(0, 100%);
   }
+
   100% {
     transform: translate(0, 20%);
   }
 }
+
 @keyframes showBotContent {
   0% {
     transform: translate(0, -100%);
   }
+
   100% {
     transform: translate(0, -20%);
   }
 }
-#aboutTwo{
-  padding: 10rem 0 20rem 0;
+
+#aboutTwo {
+  padding: 10rem 0 20rem 15rem;
 }
+
 .aboutMeParagraph {
   color: darkgray;
   font-family: var(--primary-font);
   font-size: 4rem;
 }
-.mask{
+
+.mask {
   color: var(--blue);
   position: absolute;
 }
-#aboutThree{
-  padding: 0 0 20rem 0;
+
+#aboutThree {
+  padding: 0 0 20rem 15rem;
 }
-.passionsScroll{
+
+.passionsScroll {
   width: 80rem;
   font-family: var(--primary-font);
   font-size: 10rem;
@@ -113,38 +134,44 @@ h1 {
   white-space: nowrap;
 
 }
-.aboutThreeLineOne{
+
+.aboutThreeLineOne {
   transform: translateX(-213%)
 }
-.aboutThreeLineTwo{
+
+.aboutThreeLineTwo {
   transform: translateX(-204%);
 }
-#projects{
-  padding: 0 0 10rem 0;
+
+.projectComponent {
+  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
-.projectComponent{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-.projectTitle{
+
+.projectTitle {
   font-family: var(--primary-font);
   font-size: 5rem;
   color: var(--blue);
 }
-.projectOneLine{
+
+.projectOneLine {
   font-family: var(--secondary-font);
   font-size: 3rem;
   color: var(--white-two);
 }
-.projectTechnologies{
+
+.projectTechnologies {
   font-family: var(--secondary-font);
   font-size: 1.5rem;
   color: darkgray;
 }
-.projectButtonsWrapper{
+
+.projectButtonsWrapper {
   margin-top: 0.8rem;
 }
-.projectButton{
+
+.projectButton {
   padding: 0.5rem 1rem;
   margin-right: 1rem;
   font-family: var(--primary-font);
@@ -153,36 +180,64 @@ h1 {
   transition: transform 0.5s;
   border-radius: 0.5rem;
 }
-.projectButton:hover{
+
+.projectButton:hover {
   transform: scale(1.2);
 }
-.projectDescription{
+
+.projectDescription {
   width: 60vw;
   margin-top: 2rem;
   font-size: 2rem;
   color: var(--white-two);
 }
-#contact{
+
+#contact {
   padding-bottom: 6rem;
 }
-#contactText{
+
+#contactText {
   font-family: var(--primary-font);
   color: var(--blue);
   font-size: 8rem;
 }
-#contactSubtext{
+
+#contactSubtext {
   font-family: var(--secondary-font);
   color: var(--white-two);
   font-size: 1.5rem;
   transform: translateY(-2rem);
 }
-#contactLinks{
+
+#contactLinks {
   display: flex;
   flex-direction: column;
 }
-#contactButtons a{
+
+#contactLinks a {
+  width: 30rem;
   margin: 1rem 0;
+  padding-left: 1rem;
   font-family: var(--secondary-font);
-  color: var(--blue);
   font-size: 3rem;
+  color: var(--blue);
+}
+
+.bgSlider {
+  background-size: 400%;
+  background-image: linear-gradient(90deg,
+      var(--black-one) 0%,
+      var(--black-one) 50%,
+      var(--white-two) 50%,
+      var(--white-two) 100%);
+  border-radius: 1rem 2rem 2rem 1rem;
+  transition: 0.4s ease-out;
+}
+
+.bgSlider:hover {
+  background-position: -50% 100%;
+}
+
+#contactLinks a:hover {
+  color: var(--black-one);
 }

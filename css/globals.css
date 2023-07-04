@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 body.active{
-  overflow: visible;
+  overflow-y: visible;
 }
 button{
   cursor: none;
