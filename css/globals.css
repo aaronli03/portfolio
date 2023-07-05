@@ -52,6 +52,7 @@ a{
   transform: translate(-50%, -50%) scale(1);
   transition: transform 0.2s;
   mix-blend-mode: difference;
+  z-index: 999;
 }
 #cursor.difference{
   mix-blend-mode: normal;

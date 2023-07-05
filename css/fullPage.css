@@ -112,13 +112,22 @@ h1 {
 
 .aboutMeParagraph {
   color: darkgray;
+  opacity: 0.2;
   font-family: var(--primary-font);
   font-size: 4rem;
 }
 
 .mask {
+  opacity: 1;
   color: var(--blue);
   position: absolute;
+  z-index: 1;
+}
+
+.aboutTwoLineMask {
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #aboutThree {
@@ -132,11 +141,10 @@ h1 {
   color: var(--blue);
   overflow: hidden;
   white-space: nowrap;
-
 }
 
 .aboutThreeLineOne {
-  transform: translateX(-213%)
+  transform: translateX(-213%);
 }
 
 .aboutThreeLineTwo {
@@ -225,11 +233,13 @@ h1 {
 
 .bgSlider {
   background-size: 400%;
-  background-image: linear-gradient(90deg,
-      var(--black-one) 0%,
-      var(--black-one) 50%,
-      var(--white-two) 50%,
-      var(--white-two) 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--black-one) 0%,
+    var(--black-one) 50%,
+    var(--white-two) 50%,
+    var(--white-two) 100%
+  );
   border-radius: 1rem 2rem 2rem 1rem;
   transition: 0.4s ease-out;
 }
