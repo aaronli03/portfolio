@@ -144,13 +144,16 @@ h1 {
 }
 
 .aboutThreeLineOne {
-  transform: translateX(-213%);
+  transform: translateX(-91%);
 }
 
 .aboutThreeLineTwo {
-  transform: translateX(-204%);
+  transform: translateX(-103%);
 }
 
+.aboutThreeLineThree {
+  transform: translateX(-100%);
+}
 .projectComponent {
   height: 100vh;
   padding-top: 5rem;
