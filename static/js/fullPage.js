@@ -18,7 +18,7 @@ gsap.to(".aboutTwoLineMask", {
     scrub: 0.5,
   },
   width: "100%",
-  duration: 1.3,
+  duration: 1.4,
 });
 
 gsap.to(".aboutThreeLineOne", {
@@ -29,6 +29,7 @@ gsap.to(".aboutThreeLineOne", {
     scrub: 4,
   },
   transform: "translateX(2%)",
+  ease: "slow(0.7, 0.7, false)",
 });
 
 gsap.from(".aboutThreeLineTwo", {
@@ -39,6 +40,7 @@ gsap.from(".aboutThreeLineTwo", {
     scrub: 4,
   },
   transform: "translateX(8%)",
+  ease: "slow(0.7, 0.7, false)",
 });
 
 gsap.to(".aboutThreeLineThree", {
@@ -49,6 +51,7 @@ gsap.to(".aboutThreeLineThree", {
     scrub: 4,
   },
   transform: "translateX(0%)",
+  ease: "slow(0.7, 0.7, false)",
 });
 
 gsap.from(".aboutThreeLineFour", {
@@ -59,4 +62,25 @@ gsap.from(".aboutThreeLineFour", {
     scrub: 4,
   },
   transform: "translateX(8%)",
+  ease: "slow(0.7, 0.7, false)",
+});
+
+ScrollTrigger.create({
+  trigger: ".projectComponentOne",
+  start: "top top",
+  pin: true,
+  pinSpacing: false,
+});
+ScrollTrigger.create({
+  trigger: ".projectComponentTwo",
+  start: "top top",
+  pin: true,
+  pinSpacing: false,
+});
+ScrollTrigger.create({
+  trigger: ".projectComponentThree",
+  start: "top top",
+  end: "bottom bottom",
+  pin: true,
+  pinSpacing: false,
 });
