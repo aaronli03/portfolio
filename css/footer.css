@@ -20,10 +20,12 @@ footer.show {
   align-items: end;
   width: 100vw;
   transform: translateY(-140%);
+  pointer-events: none;
 }
 .socialIcon {
   margin-top: 2.5rem;
   transition: 0.5s;
+  pointer-events: auto;
 }
 .socialIcon svg{
   height: 2rem;
@@ -39,6 +41,7 @@ footer.show {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  pointer-events: auto;
 }
 #musicLabel{
   width: 3.5rem;

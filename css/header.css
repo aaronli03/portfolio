@@ -21,10 +21,12 @@ header.show {
   justify-content: space-between;
   width: 100vw;
   transform: translateY(210%);
+  pointer-events: none;
 }
 #homeIcon {
   height: 4rem;
   transition: 0.3s;
+  pointer-events: auto;
 }
 #homeIcon:hover {
   transform: scale(1.5);
@@ -33,6 +35,7 @@ header.show {
   display: flex;
   flex-direction: column;
   align-items: end;
+  pointer-events: auto;
 }
 #nav a {
   color: var(--blue);
