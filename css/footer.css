@@ -4,7 +4,7 @@ footer {
   justify-content: space-between;
   width: 90%;
   margin: 2% 5%;
-  top:100vh;
+  top:100%;
   opacity: 0;
   transition: ease 0.5s;
   visibility: hidden;
@@ -13,9 +13,13 @@ footer.show {
   opacity: 1;
   visibility: visible;
 }
-#socials{
+#footerWrapper{
   position: relative;
-  transform: translateY(-150%);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100vw;
+  transform: translateY(-140%);
 }
 .socialIcon {
   margin-top: 2.5rem;
@@ -29,4 +33,49 @@ footer.show {
 }
 .socialIcon:hover .b {
   fill: var(--white-one);
+}
+#musicControl{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#musicLabel{
+  width: 3.5rem;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--white-two);
+  transform: rotate(90deg);
+}
+input {
+  appearance: none;
+  cursor: none;
+  position: relative;
+  width: 3rem;
+  height: 1.75rem;
+  border-radius: 2rem;
+  background-color: darkgray;
+  transition: background-color .3s;
+  transform: translate(50%, -10%) rotate(270deg);
+}
+input::after {
+  content: '';
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  top: 50%;
+  left: 30%;
+  background-color: var(--white-two);
+  transition: left .3s;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input:checked {
+  background-color: var(--blue);
+}
+
+input:checked::after {
+  left: 70%;
 }
