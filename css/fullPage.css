@@ -135,24 +135,27 @@ h1 {
 }
 
 .passionsScroll {
-  width: 80rem;
+  width: 90rem;
   font-family: var(--primary-font);
-  font-size: 10rem;
+  font-size: 8rem;
   color: var(--blue);
   overflow: hidden;
   white-space: nowrap;
 }
 
 .aboutThreeLineOne {
-  transform: translateX(-91%);
+  transform: translateX(-8%);
 }
 
 .aboutThreeLineTwo {
-  transform: translateX(-103%);
+  transform: translateX(-10%);
 }
 
 .aboutThreeLineThree {
-  transform: translateX(-100%);
+  transform: translateX(-8%);
+}
+.aboutThreeLineFour {
+  transform: translateX(-10%);
 }
 .projectComponent {
   height: 100vh;
