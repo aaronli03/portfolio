@@ -15,6 +15,7 @@ function togglePages() {
     document.getElementById("loadPage").classList.toggle("show");
   }, timeoutOne);
   setTimeout(() => {
+    audioToggle.checked = true;
     document.body.classList.toggle("active")
     document.getElementById("fullPage").classList.toggle("show");
     document.querySelector("header").classList.toggle("show");

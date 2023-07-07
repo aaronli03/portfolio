@@ -160,7 +160,8 @@ h1 {
 }
 .projectComponentOne,
 .projectComponentTwo,
-.projectComponentThree
+.projectComponentThree,
+.projectComponentFour
 {
   height: 100vh;
   padding-top: 5rem;
@@ -176,7 +177,7 @@ h1 {
 
 .projectOneLine {
   font-family: var(--secondary-font);
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--white-two);
 }
 
@@ -196,9 +197,13 @@ h1 {
   font-family: var(--primary-font);
   font-size: 1rem;
   font-weight: 800;
-  background-color: lightgray;
+  background-color: var(--white-two);
   transition: transform 0.5s;
   border-radius: 0.5rem;
+}
+
+.projectButton a{
+  color: var(--black-one);
 }
 
 .projectButton:hover {
