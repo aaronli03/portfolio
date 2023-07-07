@@ -12,13 +12,13 @@
 
     <link rel="icon" href="/static/images/icon.png" type="image/x-icon" />
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-    defer
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-    defer
-  ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer
+    ></script>
     <script src="/static/js/script.js" defer></script>
     <script src="/static/js/loadPage.js" defer></script>
     <script src="static/js/fullPage.js" defer></script>
@@ -124,18 +124,10 @@
           <div id="aboutThree" class="block">
             <h1>passions</h1>
             <div class="passionsScroll">
-              <div class="aboutThreeLineOne">
-                BASKETBALL. UI/UX DESIGN.
-              </div>
-              <div class="aboutThreeLineTwo">
-                NEW MUSIC. COOKING. WALKS.
-              </div>
-              <div class="aboutThreeLineThree">
-                GYM. HIKING. VIDEO GAMES.
-              </div>
-              <div class="aboutThreeLineFour">
-                RUNNING. SUNSETS. WEB DEV.
-              </div>
+              <div class="aboutThreeLineOne">BASKETBALL. UI/UX DESIGN.</div>
+              <div class="aboutThreeLineTwo">NEW MUSIC. COOKING. WALKS.</div>
+              <div class="aboutThreeLineThree">GYM. HIKING. VIDEO GAMES.</div>
+              <div class="aboutThreeLineFour">RUNNING. SUNSETS. WEB DEV.</div>
             </div>
           </div>
         </div>
@@ -147,14 +139,36 @@
             <div class="projectTitle">ViBE</div>
             <div class="projectOneLine">song recommender application</div>
             <div class="projectTechnologies">
-              Svelte / Typescript / Firebase / Playwright / Vitest / Postman /
-              Wondershare / Notion
+              Svelte / Typescript / Firebase / Playwright / Vitest / Node
             </div>
             <div class="projectButtonsWrapper">
-              <button class="projectButton">GITHUB</button>
-              <button class="projectButton">DESIGN DOCS</button>
-              <button class="projectButton">NOTION</button>
-              <button class="projectButton">FIGMA</button>
+              <button class="projectButton">
+                <a href="https://github.com/aaronli03/vibe-1" target="_blank"
+                  >GITHUB</a
+                >
+              </button>
+              <button class="projectButton">
+                <a href="/static/files/Vibe UML.pdf" target="_blank">UML</a>
+              </button>
+              <button class="projectButton">
+                <a
+                  href="static/files/Design_Database_structure.pdf"
+                  target="_blank"
+                  >SAMPLE DOC 1</a
+                >
+              </button>
+              <button class="projectButton">
+                <a href="static/files/Design_API_structure.pdf" target="_blank"
+                  >SAMPLE DOC 2</a
+                >
+              </button>
+              <button class="projectButton">
+                <a
+                  href="https://www.figma.com/file/YIX7RrW8OA3sX11r4lF47q/vibe?type=design&node-id=0%3A1&mode=design&t=jwXWALQMKYijehYR-1"
+                  target="_blank"
+                  >FIGMA</a
+                >
+              </button>
             </div>
             <div class="projectDescription">
               ViBE is a song recommender application built using Spotify's API
@@ -171,12 +185,37 @@
             <div class="projectTitle">Playlister</div>
             <div class="projectOneLine">Youtube music video manager</div>
             <div class="projectTechnologies">
-              React / Javascript / Express / MongoDB / Lucidchart / Postman
+              React / Javascript / Express / MongoDB / Node
             </div>
             <div class="projectButtonsWrapper">
-              <button class="projectButton">GITHUB</button>
-              <button class="projectButton">UML DIAGRAM</button>
-              <button class="projectButton">WIREFRAME</button>
+              <button class="projectButton">
+                <a
+                  href="https://github.com/aaronli03/final-project"
+                  target="_blank"
+                  >GITHUB</a
+                >
+              </button>
+              <button class="projectButton">
+                <a
+                  href="static/files/Playlister - Front-End Composition Design Diagram.jpeg"
+                  target="_blank"
+                  >SAMPLE DIAGRAM 1</a
+                >
+              </button>
+              <button class="projectButton">
+                <a
+                  href="static/files/Playlister - Store Management Design Diagram.jpeg"
+                  target="_blank"
+                  >SAMPLE DIAGRAM 2</a
+                >
+              </button>
+              <button class="projectButton">
+                <a
+                  href="static/files/Playlister_Splash_Screen.png"
+                  target="_blank"
+                  >HOME MOCKUP</a
+                >
+              </button>
             </div>
             <div class="projectDescription">
               Playlister is an application for managing YouTube videos. Users
@@ -191,11 +230,15 @@
           <div class="projectComponentThree">
             <div class="projectTitle">Game Server</div>
             <div class="projectOneLine">game server for simple games</div>
-            <div class="projectTechnologies">
-              C / GDB / threads / multi-threading / concurrency / networking
-            </div>
+            <div class="projectTechnologies">C / Criterion</div>
             <div class="projectButtonsWrapper">
-              <button class="projectButton">GITHUB</button>
+              <button class="projectButton">
+                <a
+                  href="https://github.com/aaronli03/Game-Server"
+                  target="_blank"
+                  >GITHUB</a
+                >
+              </button>
             </div>
             <div class="projectDescription">
               The Game Server hosts simple games like chess, checkers, and
@@ -205,7 +248,6 @@
               concurrency. I was also able to deepen my understanding of
               programming fundamentals at a very low level.
             </div>
-            <div></div>
           </div>
         </div>
       </section>
@@ -358,7 +400,12 @@
           </li>
         </ul>
         <div id="musicControl">
-          <input id="audioToggle" type="checkbox" class="cursorContent" checked>
+          <input
+            id="audioToggle"
+            type="checkbox"
+            class="cursorContent"
+            checked
+          />
           <div id="musicLabel">s o u n d</div>
         </div>
       </div>
