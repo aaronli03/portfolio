@@ -1,5 +1,6 @@
 window.onbeforeunload = function() {
   window.scrollTo(0, 0);
+  audio.pause();
 }
 const cursor = document.getElementById("cursor");
 
@@ -17,6 +18,11 @@ function showCursor() {
 }
 window.addEventListener("resize", reCalculateSize);
 window.addEventListener("load", reCalculateSize);
+window.addEventListener("load", function(){
+  if (document.getElementById("loadPage").classList.contains("show")){
+    audio.pause();
+  }
+})
 
 
 function reCalculateSize(){
