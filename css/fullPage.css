@@ -144,7 +144,7 @@ h1 {
 }
 
 .aboutThreeLineOne {
-  transform: translateX(-8%);
+  transform: translateX(-20%);
 }
 
 .aboutThreeLineTwo {
@@ -152,7 +152,7 @@ h1 {
 }
 
 .aboutThreeLineThree {
-  transform: translateX(-8%);
+  transform: translateX(-20%);
 }
 
 .aboutThreeLineFour {
