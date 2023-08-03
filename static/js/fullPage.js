@@ -67,25 +67,25 @@ gsap.from(".aboutThreeLineFour", {
 
 ScrollTrigger.create({
   trigger: ".projectComponentOne",
-  start: "top top",
+  start: "top -15%",
   pin: true,
   pinSpacing: false,
 });
 ScrollTrigger.create({
   trigger: ".projectComponentTwo",
-  start: "top top",
+  start: "top -15%",
   pin: true,
   pinSpacing: false,
 });
 ScrollTrigger.create({
   trigger: ".projectComponentThree",
-  start: "top top",
+  start: "top -15%",
   pin: true,
   pinSpacing: false,
 });
 ScrollTrigger.create({
   trigger: ".projectComponentFour",
-  start: "top top",
+  start: "top -15%",
   end: "bottom bottom",
   pin: true,
   pinSpacing: false,

@@ -166,10 +166,11 @@ h1 {
   height: 100vh;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: var(--black-one);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--black-one) 15%);
 }
 
 .projectTitle {
+  padding-top: 10%;
   font-family: var(--primary-font);
   font-size: 5rem;
   color: var(--blue);
