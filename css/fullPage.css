@@ -228,7 +228,7 @@ h1 {
 #contactText {
   font-family: var(--primary-font);
   color: var(--blue);
-  font-size: 8rem;
+  font-size: 6rem;
 }
 
 #contactSubtext {
