@@ -86,6 +86,12 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: ".projectComponentFour",
   start: "top -15%",
+  pin: true,
+  pinSpacing: false,
+});
+ScrollTrigger.create({
+  trigger: ".projectComponentFive",
+  start: "top -15%",
   end: "bottom bottom",
   pin: true,
   pinSpacing: false,
