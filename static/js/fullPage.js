@@ -61,7 +61,7 @@ gsap.from(".aboutThreeLineFour", {
     end: "bottom 10%",
     scrub: 4,
   },
-  transform: "translateX(8%)",
+  transform: "translateX(2%)",
   ease: "slow(0.7, 0.7, false)",
 });
 
